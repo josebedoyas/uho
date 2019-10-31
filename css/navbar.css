@@ -1,0 +1,94 @@
+
+@font-face{
+    font-family:bebasbold;
+    src: url(../fonts/brandon-grotesque-light-58a8a4b38001d.otf)
+}
+
+nav{
+    position:fixed;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0);z-index: 2;
+}
+nav ul{ 
+    float: right;
+    margin: 0;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    padding:  10px 5px;
+    list-style: none;
+   
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+
+}
+@keyframes slideIn{
+    from{
+        
+    }to{transform: translateX(0);}
+}
+
+
+nav ul li a{
+ color:aliceblue;
+    text-shadow: 2px 2px 2px black;
+    font-size: 1em;
+     font-family:brandon grotesque;
+padding: 0.2rem 0;
+    letter-spacing: 0.5em;
+    margin: 0 3rem;
+    position: relative;
+    
+    text-decoration: none;
+}
+nav ul li a:last-child{
+    margin-right: 0;
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: '';
+    
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: aqua;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s; 
+}
+nav ul li a::before{
+ top:0;   
+    transform-origin: left;
+}
+nav ul li a::after{
+ bottom:0;   
+    transform-origin: right;
+}
+ nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+nav .loo:hover{
+    
+    cursor:pointer;
+}
+nav .loo {
+    padding: 0.5rem 0;
+    margin: 0 3rem;
+   
+    float: left;
+}
+
+nav .loo svg {
+    height: 30px;
+    transition: .5s;
+     -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
+}
+
+nav.black{
+    background: rgba(0,0,0,0.5);
+}
